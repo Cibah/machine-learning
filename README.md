@@ -18,4 +18,3 @@
     - Stock prediction
     - ...
     
- 
