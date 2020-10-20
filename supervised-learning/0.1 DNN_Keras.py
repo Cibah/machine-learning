@@ -1,6 +1,6 @@
 # compare algorithms
 from pandas import read_csv
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer
@@ -17,6 +17,9 @@ dataset = read_csv(url, names=names)
 array = dataset.values
 X = array[:,0:4]
 y = array[:,4]
+
+print(X)
+print(y)
 
 scaler = Normalizer().fit(X)
 normalizedX = scaler.transform(X)
@@ -45,12 +48,11 @@ X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=
 #Create neural net
 model = Sequential()
 model.add(Dense(10, input_dim=normalizedX.shape[1], kernel_initializer='normal', activation='relu'))
-model.add(Dense(50, input_dim=normalizedX.shape[1], kernel_initializer='normal', activation='relu'))
 model.add(Dense(10, input_dim=normalizedX.shape[1], kernel_initializer='normal', activation='relu'))
 model.add(Dense(1, kernel_initializer='normal'))
 model.add(Dense(onehotlabels.shape[1],activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy','Precision'])
-history = model.fit(X_train,Y_train,validation_data=(X_validation,Y_validation), verbose=1, epochs=50)
+history = model.fit(X_train,Y_train,validation_data=(X_validation,Y_validation), verbose=2, epochs=300)
 
 # Measure accuracy
 prediction = model.predict(X_validation)
