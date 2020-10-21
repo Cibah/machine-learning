@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/896a964a742b45d6b11d95a9253ca20f)](https://www.codacy.com/gh/Cibah/machine-learning/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Cibah/machine-learning&amp;utm_campaign=Badge_Grade)
+
 # Machine learning with Python 
 ## Machine learning paradigms:
 * Reinforcement learning
