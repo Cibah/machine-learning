@@ -1,2 +1,4 @@
 .idea
 venv/*
+*checkpoints/
+best_model.h5
