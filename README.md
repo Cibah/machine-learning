@@ -8,7 +8,7 @@
     * Regression
 * Unsupervised learning 
     * Clustering
-    * Autoencoders
+    * Anomaly-detection
     
 - Use-Cases:
     - Image recognition and classification (e.g. Face recognition )
