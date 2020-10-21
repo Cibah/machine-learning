@@ -30,8 +30,8 @@ plt.scatter(X_test, Y_test, color='black')
 plt.title('Test Data')
 plt.xlabel('Size')
 plt.ylabel('Price')
-plt.xticks(())
-plt.yticks(())
+#plt.xticks(())
+#plt.yticks(())
 
 
 #1. Linear Regression
